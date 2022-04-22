@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.test {
+  @apply font-bold;
+  @apply bg-red-500;
+  @apply text-white;
+}
