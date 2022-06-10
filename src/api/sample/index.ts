@@ -1,4 +1,4 @@
-const sampleAPI  = (params: string) => {
+const sampleAPI = (params: string) => {
   return new Promise((res) => {
     window.setTimeout(function () {
       if (params) {
@@ -10,12 +10,12 @@ const sampleAPI  = (params: string) => {
   });
 };
 
-const sampleUpdateAPI  = () => {
+const sampleUpdateAPI = () => {
   return new Promise((res) => {
     window.setTimeout(function () {
-      res([6,7,8,9]);
+      res([6, 7, 8, 9]);
     }, 1000);
   });
 };
 
-export {sampleAPI, sampleUpdateAPI} 
+export { sampleAPI, sampleUpdateAPI };

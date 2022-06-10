@@ -1,0 +1,14 @@
+.root {
+  @apply relative overflow-hidden inline-flex h-10;
+  width: 25ch;
+  @apply border border-solid border-current text-gray-300 hover:text-gray-400 focus-within:text-gray-400;
+}
+.input {
+  @apply w-full px-2 bg-transparent text-black outline-none;
+}
+.button {
+  @apply pr-2 text-gray-400;
+}
+.icon {
+  @apply inline-flex items-center pl-2;
+}

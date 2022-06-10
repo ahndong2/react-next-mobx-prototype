@@ -1,0 +1,33 @@
+$icon-disabled: theme('colors.gray.200');
+$icon-default: theme('colors.gray.300');
+$icon-checked: theme('colors.gray.400');
+
+.root {
+  @apply relative inline-flex items-center;
+  &:not(.disabled) {
+    @apply cursor-pointer;
+  }
+  .label {
+    @apply px-2;
+  }
+}
+.input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.icon {
+  color: $icon-default;
+}
+.checked {
+  .icon {
+    color: $icon-checked;
+  }
+}
+.disabled {
+  @apply cursor-not-allowed;
+  .icon {
+    color: $icon-disabled;
+  }
+}

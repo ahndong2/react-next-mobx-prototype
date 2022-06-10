@@ -1,29 +1,23 @@
 import { useState } from 'react';
 import { AppProps } from 'next/app';
-import { Provider } from "mobx-react";
-import {store, RootStore} from "@/store";
+import { Provider } from 'mobx-react';
+import { useStore, RootStore } from '@/store';
+import { ThemeProvider } from 'styled-components';
+import { theme } from '@/styles/theme';
 import '@/styles/globals.css';
 
-interface State {
-  Store: RootStore;
-}
 const MyApp = ({ Component, pageProps }: AppProps) => {
-  const [rootStore, setStore] = useState(store);
+  // const [pProps] = useState(pageProps);
+  // const store = useStore(pProps);
+  const [store] = useState(useStore(pageProps) as RootStore);
 
   return (
-    <Provider {...rootStore}>
-      <Component {...pageProps} />
+    <Provider {...store}>
+      <ThemeProvider theme={theme}>
+        <Component {...pageProps} />
+      </ThemeProvider>
     </Provider>
-  )
-}
+  );
+};
 
-
-// MyApp.getInitialProps = async ({ Component, ctx }) => {
-//   let pageProps = {};
-//   if (Component.getInitialProps) {
-//     pageProps = await Component.getInitialProps(ctx);
-//   }
-//   return { pageProps };
-// };
-
-export default MyApp
+export default MyApp;

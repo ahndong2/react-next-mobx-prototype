@@ -1,5 +1,3 @@
 import { CommonStyle } from 'types';
 
-export interface ButtonStyle extends CommonStyle {
-
-}
+export interface ButtonStyle extends CommonStyle {}

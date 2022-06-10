@@ -5,6 +5,10 @@ declare module 'styled-components' {
     colors: {
       primary: string;
       secondary: string;
+      error: string;
+      success: string;
     };
+    radius: string;
+    flex: (direction?: string, justify?: string, align?: string) => string;
   }
 }
